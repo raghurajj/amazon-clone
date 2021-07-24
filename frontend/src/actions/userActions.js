@@ -58,7 +58,6 @@ export const login = (email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(`/api/v1/login`, { email, password }, config)
-        console.log(data)
         dispatch({
             type: LOGIN_SUCCESS,
             payload: data.user
@@ -115,7 +114,7 @@ export const loadUser = () => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: LOAD_USER_FAIL,
-            payload: "load user error"
+            payload: null
         })
     }
 }

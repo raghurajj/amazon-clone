@@ -23,8 +23,6 @@ const UpdateUser = ({ history, match }) => {
     const userId = match.params.id;
 
     useEffect(() => {
-
-        console.log(user && user._id !== userId);
         if (user && user._id !== userId) {
             dispatch(getUserDetails(userId))
         } else {
