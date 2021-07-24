@@ -17,6 +17,8 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser())
 app.use(fileUpload());
+
+if(process.env.NODE_ENV !== 'PRODUCTION')app.use(cors({origin:'https://rps-amazon-clone.herokuapp.com'}))
 app.use(cors());
 
 // Import all routes
