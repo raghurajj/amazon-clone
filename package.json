@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "amazon clone",
   "main": "server.js",
+  "engines": {
+    "node": "16.1.0"
+  },
   "scripts": {
     "start": "node backend/server.js",
     "dev": "set NODE_ENV=DEVELOPMENT && nodemon backend/server",
